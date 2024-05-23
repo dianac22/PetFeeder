@@ -10,13 +10,18 @@
             "includePath": [
                 "C:/Users/Abc/OneDrive/Documente/PlatformIO/Projects/PetFeeder/include",
                 "C:/Users/Abc/OneDrive/Documente/PlatformIO/Projects/PetFeeder/src",
+                "C:/Users/Abc/OneDrive/Documente/PlatformIO/Projects/PetFeeder/.pio/libdeps/uno/RTClib/src",
+                "C:/Users/Abc/OneDrive/Documente/PlatformIO/Projects/PetFeeder/.pio/libdeps/uno/Adafruit BusIO",
+                "C:/Users/Abc/OneDrive/Documente/PlatformIO/Projects/PetFeeder/.pio/libdeps/uno/HX711/src",
+                "C:/Users/Abc/OneDrive/Documente/PlatformIO/Projects/PetFeeder/.pio/libdeps/uno/Keypad/src",
+                "C:/Users/Abc/OneDrive/Documente/PlatformIO/Projects/PetFeeder/.pio/libdeps/uno/LiquidCrystal_I2C",
+                "C:/Users/Abc/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
                 "C:/Users/Abc/.platformio/packages/framework-arduino-avr/cores/arduino",
                 "C:/Users/Abc/.platformio/packages/framework-arduino-avr/variants/standard",
+                "C:/Users/Abc/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
                 "C:/Users/Abc/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
                 "C:/Users/Abc/.platformio/packages/framework-arduino-avr/libraries/HID/src",
-                "C:/Users/Abc/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
                 "C:/Users/Abc/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
-                "C:/Users/Abc/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
                 ""
             ],
             "browse": {
@@ -24,13 +29,18 @@
                 "path": [
                     "C:/Users/Abc/OneDrive/Documente/PlatformIO/Projects/PetFeeder/include",
                     "C:/Users/Abc/OneDrive/Documente/PlatformIO/Projects/PetFeeder/src",
+                    "C:/Users/Abc/OneDrive/Documente/PlatformIO/Projects/PetFeeder/.pio/libdeps/uno/RTClib/src",
+                    "C:/Users/Abc/OneDrive/Documente/PlatformIO/Projects/PetFeeder/.pio/libdeps/uno/Adafruit BusIO",
+                    "C:/Users/Abc/OneDrive/Documente/PlatformIO/Projects/PetFeeder/.pio/libdeps/uno/HX711/src",
+                    "C:/Users/Abc/OneDrive/Documente/PlatformIO/Projects/PetFeeder/.pio/libdeps/uno/Keypad/src",
+                    "C:/Users/Abc/OneDrive/Documente/PlatformIO/Projects/PetFeeder/.pio/libdeps/uno/LiquidCrystal_I2C",
+                    "C:/Users/Abc/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
                     "C:/Users/Abc/.platformio/packages/framework-arduino-avr/cores/arduino",
                     "C:/Users/Abc/.platformio/packages/framework-arduino-avr/variants/standard",
+                    "C:/Users/Abc/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
                     "C:/Users/Abc/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
                     "C:/Users/Abc/.platformio/packages/framework-arduino-avr/libraries/HID/src",
-                    "C:/Users/Abc/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
                     "C:/Users/Abc/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
-                    "C:/Users/Abc/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
                     ""
                 ]
             },
