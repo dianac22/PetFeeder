@@ -1,5 +1,6 @@
-Wire
-RTClib
-LiquidCrystal_I2C
 HX711
+RTClib
+Servo
+LiquidCrystal_I2C
+Wire
 Keypad

@@ -10,6 +10,7 @@
             "includePath": [
                 "C:/Users/Abc/OneDrive/Documente/PlatformIO/Projects/PetFeeder/include",
                 "C:/Users/Abc/OneDrive/Documente/PlatformIO/Projects/PetFeeder/src",
+                "C:/Users/Abc/OneDrive/Documente/PlatformIO/Projects/PetFeeder/.pio/libdeps/uno/Servo/src",
                 "C:/Users/Abc/OneDrive/Documente/PlatformIO/Projects/PetFeeder/.pio/libdeps/uno/RTClib/src",
                 "C:/Users/Abc/OneDrive/Documente/PlatformIO/Projects/PetFeeder/.pio/libdeps/uno/Adafruit BusIO",
                 "C:/Users/Abc/OneDrive/Documente/PlatformIO/Projects/PetFeeder/.pio/libdeps/uno/HX711/src",
@@ -29,6 +30,7 @@
                 "path": [
                     "C:/Users/Abc/OneDrive/Documente/PlatformIO/Projects/PetFeeder/include",
                     "C:/Users/Abc/OneDrive/Documente/PlatformIO/Projects/PetFeeder/src",
+                    "C:/Users/Abc/OneDrive/Documente/PlatformIO/Projects/PetFeeder/.pio/libdeps/uno/Servo/src",
                     "C:/Users/Abc/OneDrive/Documente/PlatformIO/Projects/PetFeeder/.pio/libdeps/uno/RTClib/src",
                     "C:/Users/Abc/OneDrive/Documente/PlatformIO/Projects/PetFeeder/.pio/libdeps/uno/Adafruit BusIO",
                     "C:/Users/Abc/OneDrive/Documente/PlatformIO/Projects/PetFeeder/.pio/libdeps/uno/HX711/src",
