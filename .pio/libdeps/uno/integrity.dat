@@ -1,6 +1,8 @@
-HX711
 RTClib
-Servo
-LiquidCrystal_I2C
 Wire
+LiquidCrystal_I2C
 Keypad
+adafruit/Adafruit BusIO @ ^1.11.3
+SPI
+HX711
+Servo

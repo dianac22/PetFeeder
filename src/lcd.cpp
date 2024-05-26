@@ -1,20 +1,19 @@
-#include <Arduino.h>
+#include <Wire.h>
 #include <LiquidCrystal_I2C.h>
+#include "lcd.h"
+#include <Arduino.h>
 
-#define LCD_ADDR 0x27
-#define LCD_COLS 16
-#define LCD_ROWS 2
+LiquidCrystal_I2C lcd(0x27, 16, 2);
 
-LiquidCrystal_I2C lcd(LCD_ADDR, LCD_COLS, LCD_ROWS);
-
-void setup() {
-  // put your setup code here, to run once:
-  lcd.init();
-  lcd.backlight();
-  lcd.setCursor(0, 0);
-  lcd.print("Hello, world!");
+void setupLCD() {
+    lcd.init();
+    lcd.backlight();
+    lcd.clear();
 }
 
-void loop() {
-
+void updateLCD(const char* time, const char* date) {
+    lcd.setCursor(0, 0);
+    lcd.print(time);
+    lcd.setCursor(0, 1);
+    lcd.print(date);
 }

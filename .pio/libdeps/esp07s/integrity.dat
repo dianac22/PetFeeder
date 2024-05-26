@@ -1,0 +1,5 @@
+Wire
+SPI
+RTClib
+adafruit/Adafruit BusIO @ ^1.11.3
+LiquidCrystal_I2C
