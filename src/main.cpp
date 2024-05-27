@@ -5,6 +5,7 @@
 #include <LiquidCrystal_I2C.h>
 #include "lcd.h"
 #include "rtc.h"
+#include "loadcell.h"
 
 const byte ROWS = 4; // Four rows
 const byte COLS = 4; // Four columns
@@ -34,13 +35,18 @@ int buttonState = 0;
 
 int buzzerPin = 14;
 
+DateTime lastFeedingTime;
+bool feedingIntervalStarted = false;
+
 void handleKeypadInput();
 void openGate();
+void checkWeight();
 
 void setup() {
   Serial.begin(9600);
   setupLCD();
   setupRTC();
+  setupCell();
   myServo.attach(servoPin);
   myServo.write(gateClose); // Initially the gate is closed
   pinMode(buttonPin, INPUT);
@@ -74,8 +80,19 @@ void loop() {
       Serial.print(":");
       Serial.println(setMinute);
 
-      if (now.hour() == setHour && now.minute() == setMinute && now.second() == 0) {
-        openGate();
+      if (!feedingIntervalStarted) {
+        if (now.hour() == setHour && now.minute() == setMinute && now.second() == 0) {
+          openGate();
+          lastFeedingTime = now;
+          feedingIntervalStarted = true;
+        }
+      } else {
+        // Check if 30 minutes have passed since the last feeding time
+        TimeSpan timeSinceLastFeeding = now - lastFeedingTime;
+        if (timeSinceLastFeeding.minutes() >= 30) {
+          openGate();
+          lastFeedingTime = now; 
+        }
       }
     }
 
@@ -94,7 +111,7 @@ void handleKeypadInput() {
     if (key) {
       if (key >= '0' && key <= '9') {
         input += key;
-        updateLCD(input.c_str(), "Enter feeding time");
+        updateLCD(input.c_str(), "Feeding time");
         Serial.print("Input: ");
         Serial.println(input);
       }
@@ -115,8 +132,9 @@ void handleKeypadInput() {
         updateLCD("Minute set", "");
         Serial.print("Minute set: ");
         Serial.println(setMinute);
+        feedingIntervalStarted = false;
       }
-    }
+    } 
   }
 }
 
@@ -127,10 +145,29 @@ void soundBuzzer(int frequency) {
 }
 
 void openGate() {
-  Serial.println("Gate is opening...");
   myServo.write(gateOpen);
   soundBuzzer(1000);
-  delay(2000);
+  delay(500);
+  checkWeight();
   myServo.write(gateClose);
-  Serial.println("Gate is closed.");
+}
+
+void checkWeight() {
+  float weight = getWeight();
+  Serial.print("Weight: ");
+  Serial.print(weight);
+  Serial.println(" kg");
+
+  char weightStr[16];
+  sprintf(weightStr, "Weight: %.2f kg", weight);
+  updateLCD("Feeding done", weightStr);
+
+  // Sound the buzzer if the weight is under 1kg
+  if (weight < 0.1) {
+    soundBuzzer(2000); // Set back to 1kg or 0.5 kg when done
+  }
+
+  delay(1000);
+  updateLCD("Returning...", "");
+  delay(2000);
 }

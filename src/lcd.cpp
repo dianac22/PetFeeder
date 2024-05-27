@@ -12,6 +12,7 @@ void setupLCD() {
 }
 
 void updateLCD(const char* time, const char* date) {
+    lcd.clear();
     lcd.setCursor(0, 0);
     lcd.print(time);
     lcd.setCursor(0, 1);
